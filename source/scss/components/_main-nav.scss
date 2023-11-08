@@ -1,0 +1,43 @@
+.main-nav{
+    display: flex;
+    align-items: center;
+   
+    grid-gap: clamp(20px, 4.2188vw, 54px);
+   
+    &__link{
+        color: rgba(var(--cl-c),1.0);
+        font-family: var(--font-family);
+        font-size: clamp(16px, 1.4063vw, 18px);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 139.5%;
+        text-transform: uppercase;
+        position: relative;
+        transition: all .4s;
+
+        &::before{
+            z-index: 3;
+            position: absolute;
+            content: '';
+            width: 100%;
+            right: -1%;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            transform: translateY(-100%);
+            transition: .4s ease-in;
+            background-color: rgba(var(--bg-c),1.0);
+        }
+
+        &:hover{
+            color: rgba(var(--cl-d),1.0);
+            &::before{
+                right: auto;
+                left: -1%;
+                width: 102%;
+            }
+        }
+
+    }
+
+}

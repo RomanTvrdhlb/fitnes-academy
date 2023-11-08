@@ -1,0 +1,44 @@
+.main-info{
+    align-self: flex-end;
+
+   
+    padding: 49px 42px 58px;
+    display: flex;
+    grid-gap: clamp(20px, 2.8125vw, 36px);
+    justify-content: flex-end;
+    align-items: center;
+    width: 82%;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        background-color: rgba(var(--bg-c),1.0);
+        transform: skew(-20deg);
+        height: 100%;
+        top: 0;
+        left: 0;
+        width: calc(100% + 50px);
+        z-index: -1;
+    }
+    
+    &__box{
+        display: flex;
+        align-items: center;
+        grid-gap: clamp(10px, 1.25vw, 16px);
+    }
+
+    &__icon{
+        display: flex;   
+    }
+
+    p{
+        color: rgba(var(--cl-a),1.0);
+        font-family: var(--font-family2);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+        max-width: 162px;
+    }
+}

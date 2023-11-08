@@ -1,0 +1,57 @@
+// --------------- hex to rgba mixin ---------------
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+:root {
+// --------------- default global variable ---------------
+  --body-bg: #ffffff;
+  --body-font-size: 16px;
+  --content-width: 1280px;
+  // --content-width--mode: 980px;
+  --container-offset: 20px;
+
+  @include small-tablet{
+    --container-offset: 15px;
+  }
+
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-width--mode: calc(var(--content-width--mode) + (var(--container-offset) * 2));
+
+// --------------- default scroll variable ---------------
+  --scrollbar-thumb: #1c1c1c;
+  // --scrollbar-thumb-hover: #00aff0;
+  --scrollbar-track:  rgba(245, 245, 245, 0.28);
+  --scrollbar-track-hover: rgba(245, 245, 245, 0.28);
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+// --------------- default font-family variable ---------------
+  --font-family: "Mulish" , sans-serif; // var(--font-family);
+  --font-family2: "Ubuntu" , sans-serif; // var(--font-family2);
+  --font-family3: "Mulish-Italic" , sans-serif; // var(--font-family3);
+  --font-family4: "Ubuntu-Italic" , sans-serif; // var(--font-family4);
+
+// --------------- default text color variable ---------------
+  --cl-a: #{HexToRGB(#ffffff)}; // rgba(var(--cl-a),1.0);
+  --cl-b: #{HexToRGB(#000000)}; // rgba(var(--cl-b),1.0);
+  --cl-c: #{HexToRGB(#6E7683)}; // rgba(var(--cl-c),1.0);
+  --cl-d: #{HexToRGB(#D12223)}; // rgba(var(--cl-d),1.0);
+  --cl-e: #{HexToRGB(#0A121F)}; // rgba(var(--cl-e),1.0);
+
+
+  --cl-f: #{HexToRGB(#D12223)}; // rgba(var(--cl-f),1.0);
+  --cl-g: #{HexToRGB(#0A121F)}; // rgba(var(--cl-g),1.0);
+
+// --------------- default background color variable ---------------
+  --bg-a: #{HexToRGB(#ffffff)}; // rgba(var(--bg-a),1.0);
+  --bg-b: #{HexToRGB(#000000)}; // rgba(var(--bg-b),1.0);
+  --bg-c: #{HexToRGB(#D12223)}; // rgba(var(--bg-c),1.0);
+
+  --bg-d: #{HexToRGB(#292929)}; // rgba(var(--bg-d),1.0);
+
+// --------------- default border color color variable ---------------
+  --br-a: #D12223; // var(--br-a);
+  --br-b: #000000; // var(--br-b);
+// -------------
+}
+
+

@@ -1,0 +1,121 @@
+.main-lang{
+    display: flex;
+    align-items: center;
+    grid-gap: 5px;
+
+
+    &__link{
+        color: rgba(var(--cl-e),0.2);
+        font-family:var(--font-family);
+        font-size: 18px;
+        font-style: italic;
+        font-weight: 900;
+        line-height: 139.5%;
+        text-transform: uppercase;
+        transition: all .4s;
+
+        &:hover{
+            color: rgba(var(--cl-e),1.0);
+        }
+
+        &.active{
+            color: rgba(var(--cl-e),1.0);
+        }
+    }   
+}
+
+.main-title{
+    color: rgba(var(--cl-e),1.0);
+    text-align: right;
+    font-family: var(--font-family);
+    font-size: clamp(28px, 4.8438vw, 62px);
+    font-style: italic;
+    font-weight: 800;
+    line-height: 120%;
+    letter-spacing: -3.1px;
+    text-transform: uppercase;
+    max-width: 860px;
+
+    i{
+        font-size: clamp(16px, 2.3438vw, 30px);
+        height: 100%;
+        position: relative;
+        bottom: 25px;
+    }
+}
+
+.red-text{
+    color: rgba(var(--cl-d),1.0);
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+}
+
+.main-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s;
+    width: clamp(239px, 25.0781vw, 312px);
+    height: clamp(46px, 5.5469vw, 71px);
+    position: relative;
+
+    color: rgba(var(--cl-a),1.0);
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: -1.6px;
+    text-transform: uppercase;
+   
+
+    &::before{
+        background-color: rgba(var(--cl-d),1.0);
+        z-index: -1;
+        transform: skew(-20deg);
+        content: '';
+        position: absolute;
+        inset: 0;
+        transition: all .4s;
+    }
+
+    
+    &::after{
+        background-color: rgba(var(--cl-b),1.0);
+        z-index: -1;
+        transform: skew(-20deg);
+        content: '';
+        position: absolute;
+        width: 68%;
+        top: -22px;
+        z-index: -2;
+        right: -35px;
+        height: 100%;
+        transition: all .4s;
+    }
+}
+
+.main-subtitle{
+    color: rgba(var(--cl-e),1.0);
+    font-family: var(--font-family);
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 155%;
+    letter-spacing: -1.6px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    b{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-64%);
+        top: -25%;
+        color: rgba(var(--cl-d),0.1);
+        font-family: var(--font-family);
+        font-size: 39.262px;
+        font-style: italic;
+        letter-spacing: -1.963px;
+    }
+}

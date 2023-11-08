@@ -1,0 +1,52 @@
+.mobile-menu{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    flex-direction: column;
+    grid-gap: 20px;
+    height: 100vh;
+    padding: 30px;
+    transition: transform .4s ease;
+    background-color: rgba(var(--bg-d),1.0);
+    max-width: 380px;
+    width: 100%;
+    z-index: 50;
+
+    &.active{
+        transform: translateX(0);
+        display: flex;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 40px;
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav{
+        display: flex;
+        flex-direction: column;
+
+
+        &__link{
+            &::before{
+                bottom: -5px;
+                transform: none;
+            }
+        }
+    }
+
+    .logo{
+        display: flex;
+        width: 85px;
+        height: 40px;
+    }
+}

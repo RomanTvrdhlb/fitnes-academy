@@ -1,0 +1,27 @@
+.info-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: clamp(20px, 3.125vw, 40px);
+
+    &__box{
+        display: flex;
+        grid-gap: 9px;
+    }
+
+    &__icon{
+        svg{
+            fill: none;
+        }
+    }
+
+    p{
+        color: rgba(var(--cl-e),1.0);
+        font-family: var(--font-family);
+        font-size: clamp(14px, 1.1719vw, 15px);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 139.5%;
+        text-transform: uppercase;
+    }
+}

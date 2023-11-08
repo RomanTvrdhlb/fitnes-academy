@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="Ru">
+@include('partials/head.html')
+
+<body>
+  @include('partials/header.html')
+
+  <main>
+
+    <section class="first-section">
+      <div class="container">
+        <div class="first-section__box">
+          <div class="first-section__image">
+            <picture>
+              <source type='image/webp' srcset='img/index/woman.webp'>
+              <img width='575' height='709' src='img/index/woman.png' alt='image'>
+            </picture>
+          </div>
+          <div class="first-section__inner">
+            <h1 class="main-title">
+              Стань фітнес-тренером разом з нами та почни <b class="red-text">заробляти</b> на своїй 
+              любові до фітнесу! 
+              Від <b class="red-text">50 000</b> <i class="red-text">Грн</i> на місяць!
+            </h1>
+
+            <p>З нашим онлайн-курсом ви освоїте всі необхідні навички та знання, щоб стати затребуваним та високооплачуваним фахівцем.</p>
+          </div>
+
+          <ul class="main-info">
+            <li class="main-info__item">
+              <div class="main-info__box">
+                <span class="main-info__icon">
+                  <svg width='42' height='42'>
+                    <use href='img/sprite/sprite.svg#icon'></use>
+                  </svg>
+                </span>
+                <p>Диплом про проходження курсу</p>
+              </div>
+            </li>
+            <li class="main-info__item">
+              <div class="main-info__box">
+                <span class="main-info__icon"> 
+                  <svg width='42' height='42'>
+                    <use href='img/sprite/sprite.svg#icon2'></use>
+                  </svg>
+              </span>
+                <p>Можливість працевлаштування в Smidyuk Academy</p>
+              </div>
+            </li>
+            <li class="main-info__item">
+              <div class="main-info__box">
+                <span class="main-info__icon">
+                  <svg width='42' height='42'>
+                    <use href='img/sprite/sprite.svg#icon3'></use>
+                  </svg>
+                </span>
+                <p>Знижка на всі продукти SA</p>
+              </div>
+            </li>
+          </ul>
+
+          <div class="main-social">
+            <div class="main-social__box">
+              <div class="main-social__inner">
+                <a href="mailto:coachacademy@mail.ua" class="main-social__link">coachacademy@mail.ua</a>
+                <a href="tel:442071291442" class="main-social__link">+44 (20) 7129-1442</a>
+              </div>
+              <div class="main-social__inner">
+                <a href="#" class="main-social__link">
+                  <svg width='40' height='40'>
+                    <use href='img/sprite/sprite.svg#inst'></use>
+                  </svg>
+                  @coach.academy</a>
+                  <a href="#" class="main-social__link">
+                    <svg width='40' height='40'>
+                      <use href='img/sprite/sprite.svg#tg'></use>
+                    </svg>
+                    @coach.academy.group</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="container">
+        <div class="about-section__box">
+          <div class="about-section__image">
+            <picture>
+              <source type='image/webp' srcset='img/index/image1.webp'>
+              <img width='626' height='506' src='img/index/image1.png' alt='image'>
+            </picture>
+          </div>
+
+          <div class="about-section__inner">
+            <h2 class="main-top">про нас</h2>
+            <p>наш курс буде не тільки найкращим провідником у нову професію але і підійде чинним фахівцям бажаючим отримати знання та альтернативний погляд на фітнес який точно вас здивує</p>
+            <button class="main-button main-button--black">отримати консультацію</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rates-section">
+      <div class="container">
+        <div class="rates-section__box">
+          <h3 class="main-top">тарифИ</h3>
+        
+
+        <div class="rates-section__inner">
+          <ul class="rates-list">
+            <li class="rate-list__item">
+              <div class="rates-list__row rates-list__row--mode">
+                <span class="rates-list__title">LVL1</span>
+                <span class="rates-list__title">LVL1 <i>Light</i></span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Анатомія ТА Фізіологія м'язової діяльності </span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value">+</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">BisHec підхід у фітнесі </span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Ефективність роботи персонального тренера</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value">+</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Нутриціологія. Розбір 5 компонентів живлення. Відмінність дієт від збалансованого харчування. Концепції складання плану харчування. Розбір плану харчування для спортсменів та новачків</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">KOMПEKC, як відновлення після тренування</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">KOMПEKC, як засіб відновлення та реабілітації після травм</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Механізми енергозабезпечення м'язової діяльності.</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Тренування для жироспалювання.Концепція та ефективні шляхи досягнення локального жироспалювання</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Силове TpeHyBaHHA (BUKOPUCTaAHHS вільної ваги)</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Групове тренування. Види, побудова, особливості</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">тренування спрямоване Ha M'A30BY гіпертрофію. Стимули, сенсори Ta фактори</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Діагностика складу Tina Ta фітнес TecTyBaHHя</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Засоби відновлення Ta оцінка фізичного стану </span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Оцінка м'язового тонусу. Визначення м'язового дисбалансу</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Інноваційний інструментарій функціональної діяльності. OCHOBHI концепції Ta конфігурація вищих досягнень у спорті та фітнесі.</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">ЗФП спортсменів. Метод специфічності як основний фактор підготовки.</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Тренування HOBiчкiB. Приклад складання тренувального плану. </span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Тестове створення тренувального плану </span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Розвиток 5 OCHOBHUX рухових якостей. Основи Ta пріоритети B залежності від BUAY спорту</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Розминка. Phil Daru (USA) Міайд Deriy (лекція + практика)</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">ЧaT 3 головним ЛEKTOPOM школи 3 можливістю поставити запитання</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name">Безкоштовне перескладання</span>
+                <span class="rates-list__value">+</span>
+                <span class="rates-list__value rates-list__value--red">-</span>
+              </div>
+            </li>
+            <li class="rate-list__item">
+              <div class="rates-list__row">
+                <span class="rates-list__name rates-list__name--mode">Скільки коштує</span>
+                <span class="rates-list__price">9075  <b>Грн</b>
+                   <span class="rates-list__price-text">в Розстрочку <b>3025</b><i> Грн</i></span>
+                </span>
+                <span class="rates-list__price">3799  <b>Грн</b>
+                  <span class="rates-list__price-text">в Розстрочку <b>1266</b><i> Грн</i></span>
+               </span>
+              </div>
+            </li>
+
+            <li class="rate-list__item">
+              <div class="rates-list__row rates-list__row--mode">
+                <button class="main-button main-button--white">купити зараз</button>
+                <button class="main-button main-button--white">купити зараз</button>
+              </div>
+            </li>
+          </ul>
+
+          <div class="rates-section__wrapp">
+            <h4 class="main-subtitle">додатково ви отримуєте
+              <b>додатково ви отримуєте</b>
+            </h4>
+
+            <ul class="info-list">
+              <li class="info-list__item">
+                <div class="info-list__box">
+                  <span class="info-list__icon">
+                    <svg width='29' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                  </span>
+                  <p>Доступ до всіх<br> лекцій (3 міс.)</p>
+                </div>
+              </li>
+              <li class="info-list__item">
+                <div class="info-list__box">
+                  <span class="info-list__icon">
+                    <svg width='29' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                  </span>
+                  <p>Сертифікат<br> про проходження</p>
+                </div>
+              </li>
+              <li class="info-list__item">
+                <div class="info-list__box">
+                  <span class="info-list__icon">
+                    <svg width='29' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow'></use>
+                    </svg>
+                  </span>
+                  
+                  <p>Безкоштовна підписка дo таблиці 3 формулами,<br> щo визначає композиційний склад тіла</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  @include('partials/footer.html')
+  @include('partials/modals.html')
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

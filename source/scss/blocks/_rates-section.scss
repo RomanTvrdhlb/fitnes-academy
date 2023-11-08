@@ -1,0 +1,22 @@
+.rates-section{
+    padding-bottom: clamp(60px, 10vw, 128px);
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 6.7188vw, 86px);
+    }
+
+    &__wrapp{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(25px, 2.7344vw, 35px);
+    }
+}
