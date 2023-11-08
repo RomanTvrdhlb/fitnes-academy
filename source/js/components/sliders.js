@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, Grid, EffectCreative, EffectFade, Autoplay, Parallax } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 
 import vars from "../_vars";
 import {addCustomClass,removeCustomClass} from '../functions/customFunctions';
@@ -10,6 +10,7 @@ if(slider){
   const swiper = new Swiper(slider, {
     modules: [Autoplay],
     slidesPerView: 4.6,
+    centeredSlides:true,
     spaceBetween: 35,
     observer: true,
     observeParents: true,

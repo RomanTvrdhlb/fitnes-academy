@@ -21,6 +21,17 @@
         &.active{
             color: rgba(var(--cl-e),1.0);
         }
+
+
+        &:first-child{
+            &::before{
+                color: rgba(var(--cl-e),1.0);
+                content: '/';
+                display: inline-block;
+                order: 2;
+                margin-left: 5px;
+            }
+        }
     }   
 }
 
@@ -52,6 +63,7 @@
 }
 
 .main-top{
+    margin-top: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
