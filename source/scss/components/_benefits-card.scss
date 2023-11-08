@@ -30,6 +30,10 @@
 
     &__icon{
         z-index: 1;
+
+        svg{
+            fill: none;
+        }
     }
 
     p{
