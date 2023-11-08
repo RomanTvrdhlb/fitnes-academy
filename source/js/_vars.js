@@ -7,6 +7,7 @@ export default {
   overlay: document.querySelector('[data-overlay]'),
   burgers: document.querySelectorAll('.burger'),
   mobileMenu: document.querySelector('.mobile-menu'),
+  slider: document.querySelector('.lectors-slider'),
 }
 
 

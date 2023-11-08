@@ -1,0 +1,13 @@
+.lectors-slider{
+    margin-left: -13%;
+    width: calc(110% + (100vw - (var(--container-width))));
+
+    &__wrapp{
+        margin-left: 10%;
+        width: 100%;
+    }
+
+    &__slide{
+        width: 301px;
+    }
+}

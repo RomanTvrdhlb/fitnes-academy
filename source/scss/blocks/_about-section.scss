@@ -10,12 +10,12 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1136' height='317' fill='none'%3E%3Cg opacity='.6'%3E%3Cpath stroke='%23D12223' d='M180.414 1.005H1.66L218.97 316.454h165.209'/%3E%3Cpath stroke='%230A121F' d='M1334.44 1.005H145.811l217.308 315.449H1402.34'/%3E%3C/g%3E%3C/svg%3E");
             content: '';
             position: absolute;
-            right: -10%;
-            width: 100%;
-            height: 317px;
+            right: -18%;
+            width: 102%;
+            height: 330px;
             top:70px;
             background-repeat: no-repeat;
-            background-position: top right;
+            background-position: top left;
             background-size: contain;
             z-index: -1;
         }
@@ -52,8 +52,9 @@
         flex-shrink: 0;
         display: flex;
         width: Min(48.9063vw, 626px);
-
-        img,picture{
+        
+        img,picture{    
+            margin-left: -7%;
             width: 100%;
             height: auto;
         }

@@ -1,0 +1,31 @@
+.consultation-section{
+    padding-bottom: clamp(150px, 17.1094vw, 219px);
+
+
+    &__box{
+        flex-direction: column;
+        display: flex;
+        grid-gap: clamp(30px, 4.1406vw, 53px);
+        padding: 0 clamp(0px, 3.125vw, 40px);
+        position: relative;
+    }
+
+
+    &__image{
+       position: absolute;
+       right: -7%;
+       top: -40px;
+       width: Min(52.7344vw, 675px);
+       height: Min(39.5313vw, 506px);
+
+       img,picture{
+        width: 100%;
+        height: 100%;
+       }
+    }
+
+    .main-top{
+        width: 712px;
+        height: 71px;
+    }
+}

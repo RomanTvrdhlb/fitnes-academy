@@ -1,0 +1,20 @@
+.benefits-section{
+    padding-bottom: clamp(60px, 9.4531vw, 121px);
+
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: clamp(30px, 4.6875vw, 60px);
+        align-items: center;
+    }
+
+    .main-top{
+        margin-bottom: 18px;
+    }
+
+    .main-button{
+        width: clamp(300px, 27.6563vw, 354px);
+        height: clamp(46px, 4.8438vw, 62px);
+    }
+}

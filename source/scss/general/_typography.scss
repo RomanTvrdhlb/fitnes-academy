@@ -119,3 +119,28 @@
         letter-spacing: -1.963px;
     }
 }
+
+.scroll{
+    display: flex;
+    align-items: center;
+    grid-gap: 11px;
+
+    &__icon{
+        margin-bottom: -3px;
+        svg{
+            width: 18px;
+            height: auto;
+        }
+    }
+
+    p{
+        color: rgba(var(--cl-a),1.0);
+        font-family: var(--font-family);
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 10px;
+        letter-spacing: -0.55px;
+        max-width: 134px;
+    }
+}
