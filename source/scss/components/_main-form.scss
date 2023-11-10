@@ -67,7 +67,7 @@
       }
       }
 
-    &__label{
+    &__box{
         display: flex;
         flex-direction: column;
         grid-gap: 3px;
@@ -101,7 +101,7 @@
         }
     }
 
-    &__box{
+    &__label{
         position: relative;
         height: 45px;
         width: 100%;
