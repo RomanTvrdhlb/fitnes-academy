@@ -15,14 +15,20 @@ if(slider){
     autoplay:{
       delay: 4000,
     },
-     
+   
+    
+ 
     breakpoints: {
       320: {
         slidesPerView: 1,
+        autoplay: false,
       },
 
       576: {
         slidesPerView: 'auto',
+        autoplay:{
+          delay: 4000,
+        },
       },
 
       1024: {
