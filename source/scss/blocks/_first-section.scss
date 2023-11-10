@@ -33,9 +33,6 @@
         @include mobile{
             max-width: 100%;
             text-align: center;
-            br{
-                display: none;
-            }
         }
     }
 
@@ -119,6 +116,14 @@
 
             @include mobile{
                 display: none;
+            }
+
+            &--mode{
+                left: -26%;
+
+                @include laptop{
+                    left: -23%;
+                }
             }
         }
 }

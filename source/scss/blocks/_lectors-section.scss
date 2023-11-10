@@ -2,8 +2,49 @@
     padding-bottom: clamp(40px, 9.1719vw, 207px);
     overflow-x: hidden;
 
-    @include mobile{
-        padding-bottom: 20px;
+    &__content{
+        padding-top: clamp(20px, 2.8125vw, 36px);
+        position: relative;
+
+        &::before,&::after{
+            position: absolute;
+            content: '';
+            top: -1px;
+            bottom: calc(clamp(20px, 6.0156vw, 77px) * -1);
+            left: -10%;
+            pointer-events: none;
+        }
+
+        &::before{
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1341' height='1111' fill='none'%3E%3Cpath stroke='%23D12223' d='M-74.777 1110.37h919.952l494.855-705.942H649.922L922.744 1.102H-74.777' opacity='.5'/%3E%3C/svg%3E");
+            width: Min(110.4688vw, 1414px);
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;   
+            
+
+            @include laptop{
+                left: calc(var(--container-offset) * -1);
+            }
+
+            @include tablet{
+                left: -16%;
+            }
+
+            @include mobile{
+                left: -18%;
+            }
+        }
+
+        &::after{
+            border-top: solid 1px rgba(var(--cl-d),0.3);
+            border-bottom: solid 1px rgba(var(--cl-d),0.3);
+            transform: translateX(-100%);
+            width: 100vw;
+            @media (max-width: (1545px)) {
+                display: none;
+              }
+        }
     }
 
     &__box{
@@ -11,7 +52,7 @@
         flex-direction: column;
         grid-gap: clamp(30px, 3.5156vw, 45px);
         position: relative;
-        padding: clamp(25px, 3.0469vw, 39px) 0 clamp(60px, 7.4219vw, 95px);
+        padding: clamp(25px, 3.0469vw, 39px) 0 clamp(30px, 7.1219vw, 95px);
 
         &::before{
             position: absolute;

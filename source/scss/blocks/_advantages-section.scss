@@ -32,11 +32,16 @@
             justify-content: center;
             padding-left: 0;
         }
+
+        &--mode{
+            padding-left: 0;
+            justify-content: center;
+        }
     }
 
     &__image{
         position: absolute;
-        left: -10%;
+        left: -8.5%;
         top: 27%;
         width: clamp(415px, 53.5156vw, 685px);
         height: clamp(247px, 31.7969vw, 407px);

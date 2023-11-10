@@ -47,6 +47,16 @@ footer{
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+    transition: all .4s;
+
+    &--mode{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+
+      &:hover{
+        color: rgba(var(--cl-e),1.0);
+      }
+    }
   }
 
   .logo{

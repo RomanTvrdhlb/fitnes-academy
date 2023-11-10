@@ -1,20 +1,17 @@
-import Swiper from 'swiper';
-import { Autoplay } from 'swiper/modules';
-
+import Swiper from '../vendor/swiper';
 import vars from "../_vars";
-import {addCustomClass,removeCustomClass} from '../functions/customFunctions';
 
 const {slider} = vars;
 
 if(slider){
-  const swiper = new Swiper(slider, {
-    modules: [Autoplay],
+  const swiper = new Swiper(slider, {  
     slidesPerView: 4.6,  
     spaceBetween: 35,
     observer: true,
     observeParents: true,
     loop:true,
-    speed: 2000,
+    speed: 1000,
+    autoHeight: true,
     autoplay:{
       delay: 4000,
     },
@@ -26,7 +23,6 @@ if(slider){
 
       576: {
         slidesPerView: 'auto',
-        
       },
 
       1024: {
@@ -35,7 +31,7 @@ if(slider){
       },
 
       1340: {
-        slidesPerView: 4.6,
+        slidesPerView: 4.5,
       },
 
       1600: {

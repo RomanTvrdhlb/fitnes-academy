@@ -9,7 +9,7 @@ import {
   toggleClassInArray
 } from "../functions/customFunctions";
 
-const {overlay, burgers, mobileMenu} = vars;
+const {overlay, header, burgers, mobileMenu, links} = vars;
 
 
 const mobileMenuHandler = function (overlay, mobileMenu, burgers) {
@@ -27,6 +27,18 @@ const mobileMenuHandler = function (overlay, mobileMenu, burgers) {
     });
   })
 };
+
+links.forEach(function(link){
+  link.addEventListener('click', function(e){
+    const id = e.target.getAttribute('href').replace('#', '');
+    let headerHeight = header.clientHeight;
+
+    removeCustomClass(mobileMenu);
+    removeClassInArray(burgers);
+    removeCustomClass(overlay);
+    enableScroll(document.getElementById(id).offsetTop - (headerHeight))
+  })
+})
 
 const hideMenuHandler = function (overlay, mobileMenu, burger) {
   removeCustomClass(mobileMenu);

@@ -1,11 +1,11 @@
 .consultation-section{
-    padding-bottom: clamp(60px, 13.1094vw, 219px);
+    padding-bottom: clamp(40px, 14.2188vw, 183px);
     overflow-x: hidden;
 
     &__box{
         flex-direction: column;
         display: flex;
-        grid-gap: clamp(30px, 4.1406vw, 53px);
+        grid-gap: clamp(40px, 4.1406vw, 53px);
         padding: 0 clamp(0px, 3.125vw, 40px);
         position: relative;
 

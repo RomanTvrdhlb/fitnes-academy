@@ -13,12 +13,8 @@
             width: 100vw;
             pointer-events: none;
             height: clamp(270px, 24.6094vw, 315px);
-            transform: skew(35deg) translateY(-58%);
+            transform: skew(35deg) translateY(-50%);
             top: 50%;
-
-            @include laptop{
-                transform: skew(35deg) translateY(-50%);
-            }
 
             @include small-tablet{
                 top: 56%;
@@ -26,7 +22,10 @@
             }
 
             @include mobile{
-                display: none;
+                width: 250%;
+                left: 50% !important;
+                transform: skew(35deg) translate(-50%, -52%);
+                height: 215px;
             }
           }
       

@@ -125,7 +125,7 @@
 .main-subtitle{
     color: rgba(var(--cl-e),1.0);
     font-family: var(--font-family);
-    font-size: clamp(18px, 2.7vw, 32px);
+    font-size: clamp(20px, 2.7vw, 32px);
     font-style: italic;
     font-weight: 800;
     line-height: 155%;
@@ -133,6 +133,7 @@
     text-transform: uppercase;
     position: relative;
     text-align: center;
+    white-space: nowrap;
 
     b{
         min-width: 290px;
@@ -142,9 +143,23 @@
         top: -25%;
         color: rgba(var(--cl-d),0.1);
         font-family: var(--font-family);
-        font-size: clamp(20px, 3.2469vw, 39px);
+        font-size: clamp(22px, 3.2469vw, 39px);
         font-style: italic;
         letter-spacing: -1.963px;
+
+        @include mobile{
+            transform: translateX(-55%);
+        }
+
+        @include ios{
+            transform: translateX(-52%);
+        }
+    }
+
+    &--mode{
+        b{
+            min-width: 350px;
+        }
     }
 }
 

@@ -49,18 +49,39 @@
     .main-nav{
         display: flex;
         flex-direction: column;
+
+        &__link{
+            color: rgba(var(--cl-a), 1);
+
+            &:hover{
+                color: rgba(var(--cl-d), 1);
+            }
+        }
     }
 
     .main-button{
         display: flex;
+    }
 
-        &:hover{
-            color: rgba(var(--cl-c),1.0);
-
-            &::before{
-                border-color: rgba(var(--cl-c),1.0);
+    .main-lang{
+        &__link{
+            color: rgba(var(--cl-c),1);
+    
+            &:hover{
+                color: rgba(var(--cl-d),1.0) !important;
             }
-        }
+    
+            &.active{
+                color: rgba(var(--cl-a),1.0);
+            }
+    
+    
+            &:first-child{
+                &::before{
+                    color: rgba(var(--cl-a),1.0);
+                }
+            }
+        }   
     }
 
     .logo{
