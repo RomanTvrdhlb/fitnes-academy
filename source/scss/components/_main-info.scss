@@ -2,7 +2,7 @@
     align-self: flex-end;
 
    
-    padding: 49px 42px 58px;
+    padding: clamp(20px, 3.8281vw, 49px) clamp(35px, 3.2813vw, 42px) clamp(20px, 4.5313vw, 58px);
     display: flex;
     grid-gap: clamp(20px, 2.8125vw, 36px);
     justify-content: flex-end;
@@ -18,8 +18,38 @@
         height: 100%;
         top: 0;
         left: 0;
-        width: calc(100% + 50px);
+        width: calc(100% + 125px);
         z-index: -1;
+
+        @include small-tablet{
+            width: calc(100% - (var(--container-offset) * 2));
+            left: 50%;
+            transform: skew(-20deg) translateX(-50%);
+        }
+
+        @include mobile{
+            width: calc(100% - (var(--container-offset) * 4));
+        }
+
+        @include ios{
+            width: calc(100% - (var(--container-offset) * 2));
+        }
+    }
+
+
+    @include laptop{
+        padding-right: 0px;
+    }
+
+    @include small-tablet{
+        width: 100%;
+        padding-right: clamp(35px, 3.2813vw, 42px);
+    }
+
+    @include mobile{
+        grid-gap: 30px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     &__box{
@@ -30,12 +60,15 @@
 
     &__icon{
         display: flex;   
+svg{
+    width: clamp(34px, 3.2813vw, 42px);
+height: auto;    }
     }
 
     p{
         color: rgba(var(--cl-a),1.0);
         font-family: var(--font-family2);
-        font-size: 16px;
+        font-size: clamp(14px, 1.25vw, 16px);
         font-style: normal;
         font-weight: 500;
         line-height: 110%;

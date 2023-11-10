@@ -5,15 +5,23 @@ header{
 .header{
   display: grid;
   grid-template-columns: 1fr repeat(2, auto);
- 
   grid-gap: clamp(15px, 2.6563vw, 34px);
 
+  @include tablet{
+    align-items: center;
+  }
 
+
+  .main-button{
+    @include tablet{
+      display: none;
+    }
+  }
 }
 
 .logo {
-  width: clamp(160px, 14.8438vw, 190px);
-  height: clamp(56px, 5.9375vw, 76px);
+  width: clamp(150px, 14.8438vw, 190px);
+  height: clamp(50px, 5.9375vw, 76px);
   display: flex;
 
   img,
@@ -24,7 +32,10 @@ header{
   }
 }
 
-
-.burger{
- display: none;  
+.main-nav{
+  @include tablet{
+    display: none;
+  }
 }
+
+

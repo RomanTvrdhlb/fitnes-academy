@@ -22,14 +22,16 @@
         position: absolute;
         inset: -2px;
         transition: all .4s;
+        z-index: -1;
     }
 
 
     &:hover{
-        color: rgba(var(--cl-b),1.0);
+        color: rgba(var(--cl-a),1.0);
 
         &::before{
-            border-color: var(--br-b);
+            background-color: rgba(var(--bg-c),1.0);
+            border-color: var(--br-a);
         }
     }
 
@@ -39,18 +41,15 @@
         color: rgba(var(--cl-a),1.0);
 
         &::before{
-            z-index: -1;
-            border-color: transparent;
+        
+           border: none;
             background-color: rgba(var(--bg-b),1.0);
         }
 
 
         &:hover{
-            color: rgba(var(--cl-d),1.0);
-
             &::before{
-                background-color: transparent;
-                border-color: var(--br-a);
+                background-color: rgba(var(--bg-c),1.0);
             }
         }
     }
@@ -59,23 +58,13 @@
         
         color: rgba(var(--cl-e),1.0);
         font-size: 14px;
-        width: 188px;
+        width: clamp(150px, 14.6875vw, 188px);
         height: 45px;
         
         &::before{
             z-index: -1;
             border-color: transparent;
             background-color: rgba(var(--bg-a),1.0);
-        }
-
-
-        &:hover{
-            color: rgba(var(--cl-d),1.0);
-
-            &::before{
-                background-color: transparent;
-                border-color: var(--br-a);
-            }
         }
     }
 }

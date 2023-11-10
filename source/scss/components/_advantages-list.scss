@@ -7,7 +7,7 @@
         z-index: 2;
        
         display: flex;
-        padding: 21px 80px;
+        padding: 21px clamp(40px, 6.25vw, 80px);
         position: relative;
 
         &::after{
@@ -25,18 +25,58 @@
 
         &:first-child{
             left: 50px;
+
+            @include small-tablet{
+                left: initial;
+            }
         }
 
         &:nth-child(2){
             left: 245px;
+
+            @media (max-width: (1300px)) {
+                left: 216px;
+              }
+
+              @include laptop{
+                left: 178px;
+              }
+
+              @include tablet{
+                left: 115px;
+              }
+
+              @include small-tablet{
+                left: 50px;
+              }
         }
         &:nth-child(3){
             
             left: 175px;
+
+            @include small-tablet{
+                left: 100px;
+            }
         }
         &:nth-child(4){
-          
             left: 440px;
+        
+            @include laptop{
+                left: 417px;
+              }
+
+              @include tablet{
+                left: 235px;
+              }
+
+              @include small-tablet{
+                left: 150px;
+              }
+        }
+
+        @include mobile{
+            left: 10px !important;
+            padding: 15px 20px;
         }
     }
 
@@ -44,7 +84,7 @@
         z-index: 3;
         color: rgba(var(--cl-e),1.0);
         font-family: var(--font-family);
-        font-size: clamp(18px, 1.875vw, 24px);
+        font-size: clamp(14px, 1.875vw, 24px);
         font-style: italic;
         font-weight: 800;
         line-height: 155%;

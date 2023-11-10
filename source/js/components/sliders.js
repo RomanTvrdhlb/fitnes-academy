@@ -9,8 +9,7 @@ const {slider} = vars;
 if(slider){
   const swiper = new Swiper(slider, {
     modules: [Autoplay],
-    slidesPerView: 4.6,
-    centeredSlides:true,
+    slidesPerView: 4.6,  
     spaceBetween: 35,
     observer: true,
     observeParents: true,
@@ -20,13 +19,33 @@ if(slider){
       delay: 4000,
     },
      
-    // breakpoints: {
-    //   320: {
-    //     slidesPerView: 1,
-    //   },
-    //   576: {
-    //     slidesPerView: 'auto',
-    //   },
-    // },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+
+      576: {
+        slidesPerView: 'auto',
+        
+      },
+
+      1024: {
+        
+        slidesPerView: 4,
+      },
+
+      1340: {
+        slidesPerView: 4.6,
+      },
+
+      1600: {
+        slidesPerView: 5,
+      },
+
+      1920: {
+          centeredSlides:true,
+        slidesPerView: 6,
+      },
+    },
   });
   }

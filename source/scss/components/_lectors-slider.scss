@@ -1,13 +1,30 @@
 .lectors-slider{
-    margin-left: -13%;
-    width: calc(110% + (100vw - (var(--container-width))));
+    margin: 0 calc((var(--container-offset) + (((100vw - (var(--container-width)))) / 2)) * -1);
+    width: 100vw;
+
+    @media (max-width: (1300px)) {
+       margin: 0 calc((var(--container-offset)) * -1);
+      }
 
     &__wrapp{
-        margin-left: 10%;
+        margin-left: calc((((100vw - (var(--container-width)))) / 2) + 50px);
         width: 100%;
+
+        @media (max-width: (1300px)) {
+            margin-left: calc(var(--container-offset) * 2);
+        }
+
+        @include mobile{
+            margin: 0;
+        }
     }
 
     &__slide{
         width: 301px;
+
+        @include mobile{
+            display: flex;
+            justify-content: center;
+        }
     }
 }

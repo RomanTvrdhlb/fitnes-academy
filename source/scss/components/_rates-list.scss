@@ -1,47 +1,25 @@
 .rates-list{
-  
-    padding: 38px 40px 54px;
     display: flex;
     flex-direction: column;
     grid-gap: 13px;
-    position: relative;
-
-    &::before{
-        z-index: -1;
-        position: absolute;
-        content: '';
-        background: rgba(var(--bg-d),1.0);
-        height: 100%;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100vw;
-    }
-
-    &::after{
-        position: absolute;
-        content: '';
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='1112' fill='none'%3E%3Cg filter='url(%23a)' opacity='.3'%3E%3Cpath fill='url(%23b)' d='M-199.777 1319.23C-402.967 967.294-315.97 536.666-5.463 357.395c310.506-179.271 726.939-39.299 930.129 312.636 203.194 351.939 116.194 782.559-194.313 961.829-310.507 179.28-726.94 39.3-930.13-312.63Z'/%3E%3C/g%3E%3Cg filter='url(%23c)' opacity='.3'%3E%3Cpath fill='url(%23d)' d='M955.612 686.636C752.422 334.701 839.419-95.927 1149.93-275.198c310.5-179.271 726.94-39.299 930.13 312.636 203.18 351.936 116.19 782.563-194.32 961.834-310.51 179.268-726.94 39.298-930.128-312.636Z'/%3E%3C/g%3E%3Cdefs%3E%3CradialGradient id='b' cx='0' cy='0' r='1' gradientTransform='rotate(-120 468.347 392.686) scale(735.816 649.198)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D12223' stop-opacity='.83'/%3E%3Cstop offset='1' stop-color='%23D12223' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='0' cy='0' r='1' gradientTransform='rotate(-120 863.426 -257.141) scale(735.816 649.198)' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D12223' stop-opacity='.83'/%3E%3Cstop offset='1' stop-color='%23D12223' stop-opacity='0'/%3E%3C/radialGradient%3E%3Cfilter id='a' width='1643.95' height='1730.6' x='-459.532' y='129.332' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_0_1' stdDeviation='75'/%3E%3C/filter%3E%3Cfilter id='c' width='1643.95' height='1730.6' x='695.857' y='-503.26' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur result='effect1_foregroundBlur_0_1' stdDeviation='75'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E");
-        height: 100%;
-        width: 100vw;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        pointer-events: none;
-        z-index: 0;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    counter-reset: li;
 
     &__row{
         display: grid;
         grid-template-columns: 1fr minmax(auto, 215px) minmax(auto, 215px);
         grid-gap: clamp(25px, 5.3125vw, 68px);
 
-        &--mode{
-            grid-template-columns: repeat(2, minmax(auto, 215px));
-            justify-content: end;
+        @include laptop{
+            grid-template-columns: 1fr repeat(2, 160px);
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr repeat(2, 100px);
+            grid-gap: 5px;
+        }
+
+        @include mobile{
+            grid-template-columns: 1fr repeat(2, 40px);
         }
     }
 
@@ -62,7 +40,21 @@
             top: -10px;
             left: 70%;
             color: rgba(var(--cl-d),1.0);
-            font-size: clamp(16px, 1.4063vw, 18px);
+            font-size: clamp(14px, 1.4063vw, 18px);
+
+            @include small-tablet{
+                left: 65%;
+                top: -17px;
+            }
+
+            @include mobile{
+                left: 46%;
+            }
+        }
+
+        @include mobile{
+            padding-left: 5px;
+            transform: rotate(-65deg);
         }
     }
 
@@ -89,18 +81,32 @@
         font-weight: 900;
         line-height: 139.5%;
         text-transform: uppercase;
-
+        display: flex;
+        grid-gap: 5px;
 
         &--mode{
             color: rgba(var(--cl-a),1.0);
             text-align: start;
             font-family: var(--font-family);
-            font-size: clamp(24px, 2.3438vw, 30px);
+            font-size: clamp(18px, 2.3438vw, 30px);
             font-style: italic;
             font-weight: 800;
             line-height: 120%;
             letter-spacing: -1.5px;
             text-transform: uppercase; 
+
+            @include mobile{
+                justify-self: start;
+                grid-column: 1 / -1;
+                grid-row: 1 / -1;
+            }
+        }
+
+        &::before{
+            content: counter(li) ".";
+            counter-increment: li;
+            display: block;
+
         }
     }
 
@@ -108,7 +114,7 @@
         color: rgba(var(--cl-a),1.0);
         text-align: left;
         font-family: var(--font-family);
-        font-size: 47px;
+        font-size: clamp(22px, 4.6719vw, 47px);
         font-style: italic;
         font-weight: 800;
         line-height: 120%;
@@ -117,28 +123,41 @@
         position: relative;
 
         b{
-            font-size: 24px;
+            font-size: clamp(16px, 1.875vw, 24px);
             position: relative;
             bottom: 16px;
+
+            @include small-tablet{
+                bottom: 8px;
+            }
+        }
+
+        @include small-tablet{
+            text-align: end;
+        }
+
+        @include mobile{
+            text-align: center;
         }
 
         &-text{
             letter-spacing: normal;
-            display: inline-flex;
-            grid-gap: clamp(5px, .7031vw, 9px);
+            display: flex;
+            width: 210px;
+            grid-gap: clamp(2px, .7031vw, 9px);
             position: absolute;
             bottom: 5px;
             left: 12px;
             z-index: 3;
             color: rgba(var(--cl-d),1.0);
             font-family: var(--font-family);
-            font-size: 15px;
+            font-size: clamp(12px, 1.1719vw, 15px);
             font-weight: 900;
             line-height: 139.5%;
 
             b{
                 bottom: initial;
-                font-size: 16px;
+                font-size: clamp(12px, 1.25vw, 16px);
                 font-style: italic;
                 font-weight: 800;
                 line-height: 120%;
@@ -148,7 +167,23 @@
             i{
                 font-size: 12px;
                 position: relative;
-                bottom: 5px;
+                bottom: clamp(2px, .3906vw, 5px);
+            }
+
+            @include tablet{
+                left: 8px;
+                grid-gap: 3px;
+            }
+
+            @include small-tablet{
+                bottom: -9px;
+                left: -2%;
+            }
+
+            @include mobile{
+                bottom: -11px;
+                left: 50%;
+                transform: translateX(-40%);
             }
         }
     }

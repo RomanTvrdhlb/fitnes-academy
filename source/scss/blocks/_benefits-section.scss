@@ -1,6 +1,6 @@
 .benefits-section{
-    padding-bottom: clamp(60px, 9.4531vw, 121px);
-
+    padding-bottom: clamp(40px, 9.4531vw, 121px);
+    overflow-x: hidden;
 
     &__box{
         display: flex;

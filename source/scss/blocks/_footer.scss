@@ -1,18 +1,27 @@
 footer{
-  padding-bottom: 29px;
+  padding-bottom: clamp(15px, 2.2656vw, 29px);
 }
 
 .footer{
   padding-top: 20px;
   display: flex;
   flex-direction: column;
-  grid-gap: clamp(20px, 2.2656vw, 29px);
+  grid-gap: clamp(15px, 2.2656vw, 29px);
   position: relative;
+
+  @include tablet{
+    padding-top: 0;
+  }
  
   &__box{
     display: flex;
     justify-content: space-between;
     grid-gap: 30px;
+
+    @include tablet{
+      grid-gap: 20px;
+      flex-direction: column;
+    }
   }
 
 
@@ -22,6 +31,11 @@ footer{
     align-items: center;
     justify-content: space-between;
     grid-gap: 10px;
+
+    @include mobile{
+      flex-direction: column;
+
+    }
   }
 
   &__deskr{
@@ -39,6 +53,7 @@ footer{
   }
 
   .main-nav{
+    display: flex;
     position: relative;
     height: fit-content;
     &__item{
@@ -52,6 +67,10 @@ footer{
       position: absolute;
       width: 100vw;
       pointer-events: none;
+
+      @include mobile{
+        display: none;
+      }
     }
 
     &::before{
@@ -60,6 +79,15 @@ footer{
       border: solid 1px var(--br-c);
       height: 75px; 
       transform: skew(-35deg) translateY(-45%);
+
+      @include tablet{
+        right: initial;
+        right: -5%;
+        height: 60px;
+        transform: skew(-35deg) translateY(-50%);
+      }
+
+      
     }
 
     &::after{
@@ -68,6 +96,26 @@ footer{
       border: solid 1px var(--br-a);
       height: 109px;
       transform: skew(-35deg) translateY(-31%);
+
+      @include tablet{
+        right: -10%;
+        height: 70px;
+        transform: skew(-35deg) translateY(-43%);
+      }
+
+
+    }
+
+    &__item{
+      @include mobile{
+        &:first-child{
+          display: none;
+        }
+      }
+    }
+    @include mobile{
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -76,7 +124,22 @@ footer{
     &__box{
       flex-direction: column;
       align-items: flex-end;
-      grid-gap: 20px;
+      grid-gap: 10px 20px;
+
+      @include tablet{
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @include small-tablet{
+       justify-content: center;
+      }
+    }
+
+    @include tablet{
+      padding-top: 0;
     }
   }
 }

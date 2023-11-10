@@ -2,5 +2,14 @@
     padding: 0 clamp(0px, 1.1719vw, 15px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: clamp(25px, 4.0625vw, 52px) clamp(30px, 5vw, 64px);
+    grid-gap: clamp(42px, 4.0625vw, 52px) clamp(10px, 2.5vw, 32px);
+
+    @include tablet{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    @include mobile{
+        grid-gap: 32px 10px;
+    }
 }
