@@ -183,7 +183,13 @@
             @include mobile{
                 bottom: -11px;
                 left: 50%;
-                transform: translateX(-40%);
+                transform: translateX(-35%);
+            }
+
+            &--mode{
+                @include mobile{
+                    transform: translateX(-31%);
+                }
             }
         }
     }

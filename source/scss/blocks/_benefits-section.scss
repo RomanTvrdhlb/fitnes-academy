@@ -1,6 +1,14 @@
 .benefits-section{
-    padding-bottom: clamp(40px, 9.4531vw, 121px);
+    padding-bottom: clamp(10px, 9.0531vw, 121px);
     overflow-x: hidden;
+
+    @include tablet{
+        padding-bottom: 40px;
+    }
+
+    @include mobile{
+        padding-bottom: 10px;
+    }
 
     &__box{
         display: flex;
@@ -11,6 +19,10 @@
 
     .main-top{
         margin-bottom: 18px;
+
+        @include mobile{
+            margin-bottom: 0;
+        }
     }
 
     .main-button{

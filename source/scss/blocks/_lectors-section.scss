@@ -1,5 +1,10 @@
 .lectors-section{
     padding-bottom: clamp(40px, 9.1719vw, 207px);
+    overflow-x: hidden;
+
+    @include mobile{
+        padding-bottom: 20px;
+    }
 
     &__box{
         display: flex;

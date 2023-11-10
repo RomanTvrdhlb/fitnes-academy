@@ -1,6 +1,10 @@
 .advantages-section{
     padding-bottom: clamp(40px, 9.2406vw, 149px);
     overflow-x: hidden;
+
+    @include mobile{
+        padding-bottom: 20px;
+    }
     
     &__box{
         display: flex;

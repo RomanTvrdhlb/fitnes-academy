@@ -1,5 +1,5 @@
 .about-section{
-    padding-bottom: clamp(40px, 6.6406vw, 85px);
+    padding-bottom: clamp(30px, 6.6406vw, 85px);
     overflow-x: hidden;
 
     &__box{
@@ -101,6 +101,7 @@
         @include small-tablet{
             max-width: 100%;
             width: 100%;
+            padding-bottom: 0;
         }
     }
 

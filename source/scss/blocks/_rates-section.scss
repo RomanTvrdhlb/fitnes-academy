@@ -140,6 +140,10 @@
         grid-gap: 20px;
         align-items: center;
         padding-bottom: clamp(40px, 10vw, 128px);
+
+        @include mobile{
+            padding-bottom: 20px;
+        }
     }
 
     &__inner{

@@ -53,6 +53,10 @@
         position: relative;
         bottom: clamp(12px, 1.9531vw, 25px);
     }
+
+    @include mobile{
+        letter-spacing: -2.1px;
+    }
 }
 
 .red-text{
