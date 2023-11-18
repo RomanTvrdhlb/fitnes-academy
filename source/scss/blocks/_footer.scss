@@ -68,7 +68,7 @@ footer{
     display: flex;
     position: relative;
     height: fit-content;
-
+    
     &__item{
       &:nth-child(2){
         margin-left: -10px;
@@ -127,6 +127,10 @@ footer{
       }
     }
 
+    @include laptop{
+      grid-gap: clamp(20px, 2.7344vw, 28px);
+    }
+
     @include tablet{
       width: fit-content;
     }
@@ -139,12 +143,13 @@ footer{
   }
 
   .main-social{
+    padding-top: 10px;
   
-    padding-top: 58px;
     &__box{
       flex-direction: column;
       align-items: flex-end;
       grid-gap: 10px 20px;
+      max-width: 100%;
 
       @include tablet{
         flex-direction: row;
@@ -155,7 +160,7 @@ footer{
 
     }
 
-    @include tablet{
+    @include mobile{
       padding-top: 0;
     }
   }

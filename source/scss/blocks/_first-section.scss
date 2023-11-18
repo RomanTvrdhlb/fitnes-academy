@@ -10,7 +10,7 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        grid-gap: clamp(20px, 3.9844vw, 51px);    
+        grid-gap: clamp(20px, 2.4219vw, 31px);    
     }   
 
     .main-title{
@@ -36,19 +36,11 @@
         }
     }
 
-    .main-social{
-        &__box{
-        @include tablet{
-        
-            grid-gap: 10px;
-            flex-wrap: wrap;
-        }
+    .main-info{
+        margin-top: clamp(0px, 1.5625vw, 20px);
+    }
 
-        @media (max-width: (850px)) {
-            justify-content: center;
-        }
-    }
-    }
+
 
         &__inner{
             display: flex;
