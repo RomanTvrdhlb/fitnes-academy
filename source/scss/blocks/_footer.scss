@@ -139,7 +139,8 @@ footer{
   }
 
   .main-social{
-    padding-top: 28px;
+  
+    padding-top: 58px;
     &__box{
       flex-direction: column;
       align-items: flex-end;
@@ -149,12 +150,9 @@ footer{
         flex-direction: row;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
       }
 
-      @include small-tablet{
-       justify-content: center;
-      }
     }
 
     @include tablet{
